@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<title>{% block title %}Sakshi{% endblock %}</title>
+<!-- <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link href="{% static 'server_app/index.css' %}" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="{% static 'server_app/index.js' %}"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aa436d998a.js"></script> -->
+    {% block scr %}
+    {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="description" content="CS50Web Final Project"> -->
+</head>
+<body>
+
+<div class="desktop-1">
+  <div class="container-5">
+    <div class="container-7">
+      <img class="vector-11" src="{% static 'server_app/assets/vectors/vector_3_x2.svg' %}" />
+      <img class="vector-10" src="{% static 'server_app/assets/vectors/vector_1_x2.svg' %}" />
+      <img class="vector-9"  src="{% static 'server_app/assets/vectors/vector_4_x2.svg' %}" />
+      <img class="vector-8"  src="{% static 'server_app/assets/vectors/vector_9_x2.svg' %}" />
+      <img class="vector-7"  src="{% static 'server_app/assets/vectors/vector_5_x2.svg' %}" />
+      <img class="vector-6"  src="{% static 'server_app/assets/vectors/vector_6_x2.svg' %}" />
+    </div>
+    <div class="rectangle-2">
+    </div>
+    <div class="container">
+      <div class="frame-1">
+        <div class="container-1">
+          <div class="container-8">
+            <span class="active-alerts-1">
+              Active Alerts
+            </span>
+          </div>
+          <span class="alert-1">
+            Alert 1
+          </span>
+        </div>
+        <div class="frame-4">
+          <div class="group-1">
+            <span class="active-alerts">
+              Active Alerts
+            </span>
+          </div>
+          <div class="group-2">
+            <span class="alert">
+              Alert
+            </span>
+          </div>
+          <div class="group-3">
+            <span class="alert-1">
+              Alert
+            </span>
+          </div>
+          <div class="group-4">
+            <span class="alert-2">
+              Alert
+            </span>
+          </div>
+          <div class="group-5">
+            <span class="alert-3">
+              Alert
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="frame-2">
+      </div>
+      <div class="frame-3">
+        <div class="container-6">
+          <div class="timestamp">
+            Timestamp 
+          </div>
+          <div class="x">
+            x
+          </div>
+        </div>
+        <div class="container-2">
+          <div class="location">
+            Location
+          </div>
+          <div class="x-1">
+            x
+          </div>
+        </div>
+        <div class="container-3">
+          <div class="alert-level">
+            Alert Level 
+          </div>
+          <div class="x-2">
+            x
+          </div>
+        </div>
+        <div class="container-4">
+          <div class="no-of-male">
+            No. of Male<br />
+            
+          </div>
+          <div class="x-3">
+            x
+          </div>
+        </div>
+        <div class="container-10">
+          <span class="no-of-female">
+            No. of Female<br />
+            
+          </span>
+          <span class="x-5">
+            x
+          </span>
+        </div>
+        <div class="container-12">
+          <span class="status">
+            Status 
+          </span>
+          <span class="x-4">
+            x 
+          </span>
+        </div>
+        <div class="container-9">
+          <span class="toggle-on">
+            Toggle On
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home">
+    <img class="icon" src="{% static 'server_app/assets/vectors/icon_1_x2.svg' %}" />
+  </div>
+  <img class="container-11" src="{% static 'server_app/assets/vectors/container_x2.svg' %}" />
+  <div class="logout">
+    <img class="vector-5" src="{% static 'server_app/assets/vectors/vector_x2.svg' %}" />
+    <img class="vector-4" src="{% static 'server_app/assets/vectors/vector_10_x2.svg' %}" />
+    <img class="vector-3" src="{% static 'server_app/assets/vectors/vector_8_x2.svg' %}" />
+    <img class="vector-2" src="{% static 'server_app/assets/vectors/vector_7_x2.svg' %}" />
+    <img class="vector-1" src="{% static 'server_app/assets/vectors/vector_11_x2.svg' %}" />
+    <img class="vector"   src="{% static 'server_app/assets/vectors/vector_2_x2.svg' %}" />
+  </div>
+</div>
+
+</body>
+</html>

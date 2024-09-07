@@ -1,0 +1,202 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif; /* Modern, formal look */
+    background-color: #f4f7f6; /* Light background for readability */
+    color: #333; /* Standard dark text for readability */
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  #root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* App container */
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Header Styles */
+  .header {
+    background: linear-gradient(135deg, #1e90ff, #0066cc); /* Attractive blue gradient */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  
+  /* Layout for Left Panel (Data Box + Alerts) and Right Panel (Video Player) */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  /* Left Panel for Data Box and Alerts */
+  .left-panel {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between data box and alert box */
+  }
+  
+  /* Right Panel for Video Player */
+  .right-panel {
+    flex-basis: 65%;
+  }
+  
+  /* Data Box Styles */
+  .data-box {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-left: 4px solid #1e90ff; /* Blue accent to enhance visibility */
+  }
+  
+  .data-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1e90ff; /* Using blue to keep the theme consistent */
+  }
+  
+  .data-box p {
+    font-size: 1.1rem;
+    color: #555; /* Softer text for less important details */
+  }
+  
+  /* Alerts Dropdown Styles */
+  .alerts-dropdown {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-left: 4px solid #ff6347; /* Accent in coral for differentiation */
+  }
+  
+  .alerts-dropdown label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #333;
+  }
+  
+  .alerts-dropdown select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .alerts-dropdown select:hover {
+    border-color: #1e90ff;
+  }
+  
+  /* Video Player Styles */
+  .video-player {
+    width: 100%;
+    max-width: 850px; /* Slightly increased size */
+    margin-left: 20px; /* Slight move to the right */
+  }
+  
+  .video-player video {
+    width: 100%;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Home Section Styles */
+  .home {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .home p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* MenuBar Styles */
+  .menu-bar {
+    background-color: #333;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .menu-bar ul li {
+    list-style: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .menu-bar ul li:hover {
+    background-color: #1e90ff;
+    color: white;
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  
+  button,
+  select,
+  .menu-bar ul li {
+    transition: all 0.3s ease;
+  }
+  

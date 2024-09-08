@@ -5,143 +5,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanilla JavaScript App</title>
-
-  <!-- <link rel="stylesheet" href="index.css"> -->
-  <link rel="stylesheet" href="{% static 'server_app/index.css' %}"> 
-  <!-- <link rel="stylesheet" href="{% static 'server_app/App.css' %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/Header.css'  %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/MenuBar.css'  %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/Home.css'  %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/VideoPlayer.css'  %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/DataBox.css'  %}">
-  <link rel="stylesheet" href="{% static 'server_app/components/AlertsDropdown.css'  %}"> -->
-  <script>
-    // Wait for the DOM to fully load before running the script
-document.addEventListener("DOMContentLoaded", function() {
-const root = document.getElementById('root');
-root.appendChild(App());
-});
-
-// Main App function to create the entire app structure
-function App() {
-const appDiv = document.createElement('div');
-appDiv.className = 'App';
-
-appDiv.appendChild(Header());
-appDiv.appendChild(MenuBar());
-appDiv.appendChild(Home());
-appDiv.appendChild(VideoPlayer());
-appDiv.appendChild(DataBox());
-appDiv.appendChild(AlertsDropdown());
-
-return appDiv;
-}
-
-// Header Component
-function Header() {
-const header = document.createElement('header');
-header.className = 'header';
-
-const h1 = document.createElement('h1');
-h1.innerText = 'This is the Header';
-header.appendChild(h1);
-
-return header;
-}
-
-// MenuBar Component
-function MenuBar() {
-const menuBar = document.createElement('nav');
-menuBar.className = 'menu-bar';
-
-const menuList = document.createElement('ul');
-['Home', 'About', 'Contact'].forEach(item => {
-const li = document.createElement('li');
-li.innerText = item;
-menuList.appendChild(li);
-});
-
-menuBar.appendChild(menuList);
-return menuBar;
-}
-
-// Home Component
-function Home() {
-const homeDiv = document.createElement('div');
-homeDiv.className = 'home';
-
-const welcomeMessage = document.createElement('p');
-welcomeMessage.innerText = 'Welcome to the Home Page!';
-homeDiv.appendChild(welcomeMessage);
-
-return homeDiv;
-}
-
-// VideoPlayer Component
-function VideoPlayer() {
-const videoDiv = document.createElement('div');
-videoDiv.className = 'video-player';
-
-const video = document.createElement('video');
-video.setAttribute('controls', true);
-video.setAttribute('src', 'path/to/video.mp4');  // Replace with actual video path
-videoDiv.appendChild(video);
-
-return videoDiv;
-}
-
-// DataBox Component
-function DataBox() {
-const dataBox = document.createElement('div');
-dataBox.className = 'data-box';
-
-const dataHeader = document.createElement('h2');
-dataHeader.innerText = 'Data Box';
-dataBox.appendChild(dataHeader);
-
-const dataContent = document.createElement('p');
-dataContent.innerText = 'This is where the data will be displayed.';
-dataBox.appendChild(dataContent);
-
-return dataBox;
-}
-
-// AlertsDropdown Component
-function AlertsDropdown() {
-const dropdownDiv = document.createElement('div');
-dropdownDiv.className = 'alerts-dropdown';
-
-const label = document.createElement('label');
-label.innerText = 'Alerts: ';
-dropdownDiv.appendChild(label);
-
-const select = document.createElement('select');
-['Alert 1', 'Alert 2', 'Alert 3'].forEach(alert => {
-const option = document.createElement('option');
-option.innerText = alert;
-select.appendChild(option);
-});
-
-dropdownDiv.appendChild(select);
-return dropdownDiv;
-}
-
- </script>
+  <link rel="stylesheet" href="{% static 'server_app/main.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <!-- <script src="{% static 'server_app/index.js' %}"></script> -->
-     
-    <!-- <script src="{% static 'server_app/App.js' %}"></script>
-    <script src="{% static 'server_app/components/Header.js' %}"></script>
-    <script src="{% static 'server_app/components/MenuBar.js' %}"></script>
-    <script src="{% static 'server_app/components/Home.js' %}"></script>
-    <script src="{% static 'server_app/components/VideoPlayer.js' %}"></script>
-    <script src="{% static 'server_app/components/DataBox.js' %}"></script> -->
-    <!-- <script src="{% static 'server_app/components/AlertsDropdown.js' %}"></script> -->
-  
-<div id="root">
-    
+  <div id="root">
+    <div class="App">
+      <!-- Header Component with MenuBar -->
+      <header class="header">
+        <h1>This is the Header</h1>
+        <!-- MenuBar Component -->
+        <nav class="menu-bar">
+          <ul class="flex justify-center space-x-6">
+            <li class="text-white hover:text-yellow-300 transition duration-300">Home</li>
+            <li class="text-white hover:text-yellow-300 transition duration-300">About</li>
+            <li class="text-white hover:text-yellow-300 transition duration-300">Contact</li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Home Component -->
+      <div class="home mt-4">
+        <p>Welcome to the Home Page!</p>
+      </div>
+
+      <!-- Container for Left and Right Panels -->
+      <div class="container">
+        <!-- Left Panel for Data Box and Alerts -->
+        <div class="left-panel">
+          <!-- Data Box Component -->
+          <div class="data-box">
+            <h2>Data Box</h2>
+            <p>This is where the data will be displayed.</p>
+          </div>
+
+          <div class="bg-[#353A3E] text-white text-lg font-bold p-4 rounded-lg mb-5">
+          <div class="bg-[#353A3E] text-white text-lg font-bold p-4 rounded-lg mb-5">Active Alerts :- </div>
+            
+            <div class="space-y-4">
+              <div class="bg-[#F24242] text-white  p-4 rounded-lg">Alert</div>
+              <div class="bg-[#F24242] text-white  p-4 rounded-lg">Alert</div>
+              <div class="bg-[#F24242] text-white  p-4 rounded-lg">Alert</div>
+              <div class="bg-[#F24242] text-white  p-4 rounded-lg">Alert</div>
+            </div>
+          
+          </div>
+          <!-- Alerts Details Section -->
+          <div class="bg-white shadow-lg p-5 rounded-lg flex-grow">
+            <!-- This section can contain the details of the selected alert -->
+            
+             
+          </div>
+
+
+
+          <!-- Alerts Dropdown Component -->
+          <div class="alerts-dropdown">
+            <label for="alerts">Active Alerts: </label>
+            <select id="alerts">
+              <option>Alert 1</option>
+              <option>Alert 2</option>
+              <option>Alert 3</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Right Panel for Video Player -->
+        <div class="right-panel">
+          <!-- Video Player Component -->
+          <div class="video-player">
+            <video controls src="path/to/video.mp4"></video> <!-- Replace with actual video path -->
+          </div>
+
+          <!-- Status Bar -->
+          <div class="bg-white shadow-lg p-5 rounded-lg w-1/4">
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">Timestamp</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">Location</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">Alert Level</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">No. of Male</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">No. of Female</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-lg font-medium">Status</span>
+                <span class="text-lg">x</span>
+              </div>
+              <div class="text-center mt-4">
+                <button class="bg-yellow-500 text-white px-6 py-2 rounded-lg">Acknowledge</button>
+              </div>
+              <div class="text-center mt-4">
+                <button class="bg-red-500 text-white px-6 py-2 rounded-lg">Take Action</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
 </body>
 </html>

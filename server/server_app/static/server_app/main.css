@@ -6,15 +6,15 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f7f6; /* Light background for contrast */
   color: #333;
   line-height: 1.6;
   margin: 0;
 }
 
 #root {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
   padding: 20px;
 }
@@ -24,11 +24,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 /* Header Styles */
 .header {
-  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  display: flex; /* Use flexbox for header layout */
+  justify-content: space-between; /* Space between header and menu bar */
+  align-items: center; /* Center items vertically */
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
   color: white;
   padding: 20px;
   width: 100%;
@@ -36,61 +40,108 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out; /* Animation for header */
 }
 
 .header h1 {
-  font-size: 2rem; /* Reduced size */
+  font-size: 2.2rem;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
-/* Layout Adjustments for Left Panel and Video */
+/* MenuBar Styles */
+.menu-bar {
+  background-color: transparent; /* Make menu bar background transparent */
+  width: auto; /* Auto width to fit content */
+}
+
+.menu-bar ul {
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the right */
+  gap: 30px;
+}
+
+.menu-bar ul li {
+  list-style: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+  border-radius: 5px;
+}
+
+.menu-bar ul li:hover {
+  background-color: #1e90ff; /* Highlight on hover */
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Layout for Left Panel (Data Box + Alerts) and Right Panel (Video Player) */
 .container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+  gap: 20px;
 }
 
-/* Left Panel (Data Box and Alerts) */
+/* Left Panel for Data Box and Alerts */
 .left-panel {
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between Data Box and Alerts */
+  gap: 20px;
+  align-items: flex-start; /* Align items to the start for left alignment */
 }
 
-/* Right Panel (Video Player) */
+/* Right Panel for Video Player */
 .right-panel {
   flex-basis: 65%;
+  display: flex;
+  flex-direction: row; /* Changed to column for better layout */
+  gap: 20px;
 }
 
 /* Data Box Styles */
 .data-box {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
+  border-left: 4px solid #1e90ff; /* Blue accent */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.data-box:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 .data-box h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #1e90ff; /* Blue text for headings */
 }
 
 .data-box p {
   font-size: 1.1rem;
-  color: #666;
+  color: #555;
 }
 
 /* Alerts Dropdown Styles */
 .alerts-dropdown {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
+  border-left: 4px solid #ff6347; /* Red accent */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.alerts-dropdown:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 .alerts-dropdown label {
@@ -111,14 +162,13 @@ body {
 }
 
 .alerts-dropdown select:hover {
-  border-color: #4CAF50;
+  border-color: #1e90ff; /* Change border color on hover */
 }
 
 /* Video Player Styles */
 .video-player {
   width: 100%;
-  max-width: 800px;
-  margin-left: 20px; /* Slight move to the right */
+  max-width: 850px;
 }
 
 .video-player video {
@@ -131,52 +181,22 @@ body {
 
 /* Home Section Styles */
 .home {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
+  animation: slideIn 0.5s ease-in-out; /* Animation for home section */
 }
 
 .home p {
   font-size: 1.6rem;
-  color: #444;
+  color: #333;
   margin-bottom: 10px;
 }
 
-/* MenuBar Styles */
-.menu-bar {
-  background-color: #333;
-  width: 100%;
-  padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.menu-bar ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.menu-bar ul li {
-  list-style: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
-
-.menu-bar ul li:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* General Utility Classes */
+/* Utility Classes */
 .text-center {
   text-align: center;
 }
@@ -193,4 +213,25 @@ button,
 select,
 .menu-bar ul li {
   transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

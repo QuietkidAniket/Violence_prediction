@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desktop - 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-[#F5F5DD] flex flex-col w-full min-h-screen box-border">
+      <!-- Header Section -->
+      <div class="bg-[#787373] w-full flex items-center justify-between p-5">
+        <div class="flex items-center space-x-2">
+          <img class="w-6 h-6" src="../assets/vectors/vector_3_x2.svg" alt="Icon 1"/>
+          <img class="w-6 h-6" src="../assets/vectors/vector_1_x2.svg" alt="Icon 2"/>
+          <img class="w-6 h-6" src="../assets/vectors/vector_4_x2.svg" alt="Icon 3"/>
+          <img class="w-6 h-6" src="../assets/vectors/vector_9_x2.svg" alt="Icon 2"/>
+          <img class="w-6 h-6" src="../assets/vectors/vector_5_x2.svg" alt="Icon 5"/>
+          <img class="w-6 h-6" src="../assets/vectors/vector_6_x2.svg" alt="Icon 6"/>
+        </div>
+        <button class="bg-blue-500 text-white rounded-md px-4 py-2">Logout</button>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="flex p-5 space-x-5">
+        <!-- Active Alerts Sidebar -->
+        <div class="bg-white shadow-lg p-5 rounded-lg w-1/4">
+          <div class="bg-[#353A3E] text-white text-lg font-bold p-4 rounded-lg mb-5">Active Alerts</div>
+          
+          <div class="space-y-4">
+            <div class="bg-[#F24242] text-white text-lg font-bold p-4 rounded-lg">Alert</div>
+            <div class="bg-[#F24242] text-white text-lg font-bold p-4 rounded-lg">Alert</div>
+            <div class="bg-[#F24242] text-white text-lg font-bold p-4 rounded-lg">Alert</div>
+            <div class="bg-[#F24242] text-white text-lg font-bold p-4 rounded-lg">Alert</div>
+          </div>
+        </div>
+
+        <!-- Alerts Details Section -->
+        <div class="bg-white shadow-lg p-5 rounded-lg flex-grow">
+          <div class="video-player">
+            <video controls src="path/to/video.mp4"></video> <!-- Replace with actual video path -->
+          </div>
+
+           
+        </div>
+        
+        
+        
+
+        <!-- Alerts Information -->
+        <div class="bg-white shadow-lg p-5 rounded-lg w-1/4">
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Timestamp</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Location</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Alert Level</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">No. of Male</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">No. of Female</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Status</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="text-center mt-4">
+              <button class="bg-blue-500 text-white px-6 py-2 rounded-lg">Toggle On</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

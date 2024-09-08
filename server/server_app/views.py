@@ -20,7 +20,6 @@ def index(request):
 
 
 def update_risk(Location):
-
     pass
 
 

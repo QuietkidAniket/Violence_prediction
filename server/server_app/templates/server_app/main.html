@@ -1,152 +1,113 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>    
-<title>{% block title %}Sakshi{% endblock %}</title>
-<!-- <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'> -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <link href="{% static 'server_app/index.css' %}" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="{% static 'server_app/index.js' %}"></script> -->
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/aa436d998a.js"></script> -->
-    {% block scr %}
-    {% endblock %}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <meta name="description" content="CS50Web Final Project"> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla JavaScript App</title>
+  <link rel="stylesheet" href="{% static 'server_app/index.css' %}">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desktop - 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <div id="root">
+    <div class="App">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>This is the Header</h1>
+      </header>
 
-<div class="desktop-1">
-  <div class="container-5">
-    <div class="container-7">
-      <img class="vector-11" src="{% static 'server_app/assets/vectors/vector_3_x2.svg' %}" />
-      <img class="vector-10" src="{% static 'server_app/assets/vectors/vector_1_x2.svg' %}" />
-      <img class="vector-9"  src="{% static 'server_app/assets/vectors/vector_4_x2.svg' %}" />
-      <img class="vector-8"  src="{% static 'server_app/assets/vectors/vector_9_x2.svg' %}" />
-      <img class="vector-7"  src="{% static 'server_app/assets/vectors/vector_5_x2.svg' %}" />
-      <img class="vector-6"  src="{% static 'server_app/assets/vectors/vector_6_x2.svg' %}" />
-    </div>
-    <div class="rectangle-2">
-    </div>
-    <div class="container">
-      <div class="frame-1">
-        <div class="container-1">
-          <div class="container-8">
-            <span class="active-alerts-1">
-              Active Alerts
-            </span>
-          </div>
-          <span class="alert-1">
-            Alert 1
-          </span>
-        </div>
-        <div class="frame-4">
-          <div class="group-1">
-            <span class="active-alerts">
-              Active Alerts
-            </span>
-          </div>
-          <div class="group-2">
-            <span class="alert">
-              Alert
-            </span>
-          </div>
-          <div class="group-3">
-            <span class="alert-1">
-              Alert
-            </span>
-          </div>
-          <div class="group-4">
-            <span class="alert-2">
-              Alert
-            </span>
-          </div>
-          <div class="group-5">
-            <span class="alert-3">
-              Alert
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="frame-2">
-      </div>
-      <div class="frame-3">
-        <div class="container-6">
-          <div class="timestamp">
-            Timestamp 
-          </div>
-          <div class="x">
-            x
-          </div>
-        </div>
-        <div class="container-2">
-          <div class="location">
-            Location
-          </div>
-          <div class="x-1">
-            x
-          </div>
-        </div>
-        <div class="container-3">
-          <div class="alert-level">
-            Alert Level 
-          </div>
-          <div class="x-2">
-            x
-          </div>
-        </div>
-        <div class="container-4">
-          <div class="no-of-male">
-            No. of Male<br />
-            
-          </div>
-          <div class="x-3">
-            x
-          </div>
-        </div>
-        <div class="container-10">
-          <span class="no-of-female">
-            No. of Female<br />
-            
-          </span>
-          <span class="x-5">
-            x
-          </span>
-        </div>
-        <div class="container-12">
-          <span class="status">
-            Status 
-          </span>
-          <span class="x-4">
-            x 
-          </span>
-        </div>
-        <div class="container-9">
-          <span class="toggle-on">
-            Toggle On
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="home">
-    <img class="icon" src="{% static 'server_app/assets/vectors/icon_1_x2.svg' %}" />
-  </div>
-  <img class="container-11" src="{% static 'server_app/assets/vectors/container_x2.svg' %}" />
-  <div class="logout">
-    <img class="vector-5" src="{% static 'server_app/assets/vectors/vector_x2.svg' %}" />
-    <img class="vector-4" src="{% static 'server_app/assets/vectors/vector_10_x2.svg' %}" />
-    <img class="vector-3" src="{% static 'server_app/assets/vectors/vector_8_x2.svg' %}" />
-    <img class="vector-2" src="{% static 'server_app/assets/vectors/vector_7_x2.svg' %}" />
-    <img class="vector-1" src="{% static 'server_app/assets/vectors/vector_11_x2.svg' %}" />
-    <img class="vector"   src="{% static 'server_app/assets/vectors/vector_2_x2.svg' %}" />
-  </div>
-</div>
+      <!-- MenuBar Component -->
+      <nav class="menu-bar">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
 
+      <!-- Home Component -->
+      <div class="home">
+        <p>Welcome to the Home Page!</p>
+      </div>
+
+      <!-- Container for Left and Right Panels -->
+      <div class="container">
+        <!-- Left Panel for Data Box and Alerts -->
+        <div class="left-panel">
+          <!-- Data Box Component -->
+          <div class="data-box">
+            <h2>Data Box</h2>
+            <p>This is where the data will be displayed.</p>
+          </div>
+
+          <!-- Alerts Dropdown Component -->
+          <div class="alerts-dropdown">
+            <label for="alerts">Alerts: </label>
+            <select id="alerts">
+              <option>Alert 1</option>
+              <option>Alert 2</option>
+              <option>Alert 3</option>
+            </select>
+          </div>
+        </div>
+
+
+
+        <!-- Right Panel for Video Player -->
+        <div class="right-panel">
+          <!-- Video Player Component -->
+          <div class="video-player">
+            <video controls src="path/to/video.mp4"></video> <!-- Replace with actual video path -->
+          </div>
+      
+        <!-- <div class="status-bar"> -->
+        <div class="bg-white shadow-lg p-5 rounded-lg w-1/4">
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Timestamp</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Location</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Alert Level</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">No. of Male</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">No. of Female</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-lg font-medium">Status</span>
+              <span class="text-lg">x</span>
+            </div>
+            <div class="text-center mt-4">
+              <button class="bg-yellow-500 text-white px-6 py-2 rounded-lg">Acknowledge</button>
+            </div>
+            <div class="text-center mt-4"></div>
+              <button class="bg-red-500 text-white px-6 py-2 rounded-lg">Take Action</button>
+            </div>
+          
+          </div>
+          </div>
+        </div>
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>
